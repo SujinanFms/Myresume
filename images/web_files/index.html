@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)https://static.parastorage.com/services/santa-editor/1.5445.6/node_modules/editor-organize-images/index.html?galleryType=images -->
+<html ng-app="organizeImages" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Organize Images</title>
+    <link rel="stylesheet" href="./bundle.css">
+<style></style></head>
+<body>
+    <div class="oi-app-main">
+    <div class="oi-window-main">
+        <header class="oi-header-dialog panel-header dark">
+            <span class="panel-header-title ng-binding" translate="">Organize Your Gallery Images</span>
+            <button class="close" ng-click="tryClose(true)">
+              <symbol icon="headerCloseButton"><svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="bm-icon"> 
+  <path d="M11.7928932,12.5 L8.14644661,8.85355339 L7.79289322,8.5 L8.5,7.79289322 L8.85355339,8.14644661 L12.5,11.7928932 L16.1464466,8.14644661 L16.5,7.79289322 L17.2071068,8.5 L16.8535534,8.85355339 L13.2071068,12.5 L16.8535534,16.1464466 L17.2071068,16.5 L16.5,17.2071068 L16.1464466,16.8535534 L12.5,13.2071068 L8.85355339,16.8535534 L8.5,17.2071068 L7.79289322,16.5 L8.14644661,16.1464466 L11.7928932,12.5 Z"></path>
+</svg></symbol>
+            </button>
+            <button class="help" ng-click="openHelpCenter()">
+              ?
+            </button>
+        </header>
+        <hbox class="oi-panel-main">
+            <div class="oi-panel-image-list">
+                <hbox class="oi-header-grid">
+                    <p class="oi-panel-instruction" translate="">Drag n' drop your images into position to get your gallery nicely organized.</p>
+                    <container class="oi-container-add-button">
+                        <i class="settings" ng-click="toggleSettings()">
+                            <symbol icon="quickActionsSettings"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="18px" height="18px" version="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 18 18 18" xml:space="preserve" class="bm-icon">
+    <path class="st0" fill="none" fill-rule="evenodd" stroke-width="1.1" stroke="#1d2d3c" d="M16.3,28.6l-1.6,0.3c-0.1,0.2-0.2,0.5-0.3,0.7l0.8,1.3c0.3,0.4,0.2,0.9-0.1,1.2l-0.9,0.9
+    c-0.2,0.2-0.5,0.3-0.8,0.3c-0.2,0-0.4-0.1-0.6-0.2l-1.3-0.8c-0.2,0.1-0.4,0.2-0.7,0.3l-0.3,1.5c-0.1,0.5-0.5,0.8-0.9,0.8H8.3
+    c-0.5,0-0.8-0.4-0.9-0.8l-0.3-1.5c-0.2-0.1-0.5-0.2-0.7-0.3l-1.3,0.8c-0.2,0.1-0.4,0.2-0.6,0.2c-0.3,0-0.5-0.1-0.8-0.3l-0.9-0.9
+    c-0.4-0.4-0.4-0.8-0.1-1.2l0.8-1.3c-0.1-0.2-0.2-0.4-0.3-0.7l-1.5-0.3C1.4,28.6,1,28.2,1,27.7v-1.3c0-0.5,0.4-0.8,0.8-1l1.5-0.3
+    c0.1-0.2,0.2-0.5,0.3-0.7l-0.8-1.3c-0.3-0.4-0.2-0.9,0.1-1.2l0.9-0.9c0.2-0.2,0.5-0.3,0.8-0.3c0.2,0,0.4,0.1,0.6,0.2l1.3,0.8
+    c0.2-0.1,0.4-0.2,0.7-0.3l0.3-1.5c0.1-0.5,0.5-0.8,0.9-0.8h1.4c0.5,0,0.8,0.4,0.9,0.8l0.3,1.5c0.2,0.1,0.5,0.2,0.7,0.3l1.3-0.8
+    c0.2-0.1,0.4-0.2,0.6-0.2c0.3,0,0.6,0.1,0.8,0.3l0.9,0.9c0.4,0.4,0.4,0.8,0.1,1.2l-0.8,1.3c0.1,0.2,0.2,0.4,0.3,0.7l1.5,0.3
+    c0.5,0.1,0.8,0.5,0.8,1v1.3C17.1,28.1,16.7,28.6,16.3,28.6z M9.1,24.5c-1.3,0-2.4,1.1-2.4,2.4c0,1.3,1.1,2.4,2.4,2.4
+    s2.4-1.1,2.4-2.4C11.5,25.6,10.4,24.5,9.1,24.5z"></path>
+</svg></symbol>
+                        </i>
+                        <button class="oi-button-add-images control-button btn-md" tabindex="2" bi-event="ORGIMAGES_CLICK_ADD_IMAGES" ng-click="openMediaGallery()">
+                            <div class="oi-icon-plus"></div>
+                            <span translate="">Add Images</span>
+                        </button>
+                    </container>
+                </hbox>
+                <div class="custom-scroll oi-container-image-list" ng-style="styles.root" class-name="oi-container-image-list">
+    <div class="outer-container" ng-style="styles.outerContainer">
+
+        <!-- ngIf: state.hasScroll -->
+
+        <div ref="innerContainer" class="inner-container" ng-class="{&#39;content-scrolled&#39;: state.scrollPos}" ng-style="styles.innerContainer" style="margin-right: -18px;">
+
+            <div ref="contentWrapper" class="content-wrapper" ng-style="styles.contentWrapper" ng-transclude="" style="margin-right: 0px; overflow-y: visible;">
+                    <div tabindex="1" class="items animation ng-isolate-scope" preview="preview" remove-image="removeImage" show-peek="showPeek" hide-peek="hidePeek" show-tooltip="showTooltip" hide-tooltip="hideTooltip" selected-img="selectedImg" confirm="confirm" get-img-url="getImgUrl">
+    <!-- ngRepeat: img in images --><figure ng-repeat="img in images" id="new_3" class="imgCont ng-scope active" ng-class="{active: selectedImg.id === img.id}" ng-click="preview(img, $index)" draggable="true" style="background: none;">
+        <div class="img loaded" ng-style="{&#39;background-image&#39;: getBGUrl(img)}" style="background-image: url(&quot;https://static.wixstatic.com/media/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png/v1/fill/w_120,h_120,lg_1/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png&quot;);">
+            <figcaption class="ng-binding">1</figcaption>
+            <div class="menu">
+                <span class="peek" data-id="0" ng-mouseenter="showPeek(img.data, $event)" ng-mouseleave="hidePeek()">
+                    <symbol icon="zoomIn"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Zoom In</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M8,5 L7,5 L7,7 L5,7 L5,8 L7,8 L7,10 L8,10 L8,8 L10,8 L10,7 L8,7 L8,5 L8,5 Z M12.646,11.895 C13.711,10.675 14.262,9.167 14.262,7.469 C14.262,3.718 11.221,0.677 7.469,0.677 C3.718,0.677 0.677,3.718 0.677,7.469 C0.677,11.221 3.718,14.262 7.469,14.262 C9.159,14.262 10.733,13.746 11.958,12.697 L14.938,15.677 L15.677,14.938 L12.646,11.895 L12.646,11.895 Z M7.469,13.217 C4.3,13.217 1.722,10.639 1.722,7.469 C1.722,4.3 4.3,1.722 7.469,1.722 C10.639,1.722 13.217,4.3 13.217,7.469 C13.217,10.639 10.639,13.217 7.469,13.217 L7.469,13.217 Z" id="L_Zoom-In" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+                <span class="delete" ng-click="hideTooltip(); removeNode($index); e.stopPropagation();" data-id="0" ng-mouseenter="showTooltip(&#39;ORGANIZE_IMAGES_DIALOG_TOOLTIP_REMOVE&#39;, $event)" ng-mouseleave="hideTooltip()">
+                    <symbol icon="deleteTrash"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="13px" height="15px" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Delete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M4,11 L5,11 L5,5 L4,5 L4,11 Z M8,11 L9,11 L9,5 L8,5 L8,11 Z M6,11 L7,11 L7,5 L6,5 L6,11 Z M9,2 L9,1.5 C9,0.701 8.248,0 7.392,0 L5.525,0 C4.684,0 4,0.673 4,1.5 L4,2 L0,2 L0,3 L1,3 L1,12 C1,13.657 2.343,15 4,15 L9,15 C10.657,15 12,13.657 12,12 L12,3 L13,3 L13,2 L9,2 L9,2 Z M5,1.5 C5,1.229 5.24,1 5.525,1 L7.392,1 C7.693,1 8,1.252 8,1.5 L8,2 L5,2 L5,1.5 L5,1.5 Z M11,12 C11,13.105 10.105,14 9,14 L4,14 C2.895,14 2,13.105 2,12 L2,3 L11,3 L11,12 L11,12 Z" id="L_Delete" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+            </div>
+        </div>
+    </figure><!-- end ngRepeat: img in images --><figure ng-repeat="img in images" id="new_4" class="imgCont ng-scope" ng-class="{active: selectedImg.id === img.id}" ng-click="preview(img, $index)" draggable="true" style="background: none;">
+        <div class="img loaded" ng-style="{&#39;background-image&#39;: getBGUrl(img)}" style="background-image: url(&quot;https://static.wixstatic.com/media/5c59bc_2cb9e13cef0e431ea0ce93d784d7203e~mv2_d_1773_1330_s_2.jpg/v1/fill/w_120,h_120,lg_1/5c59bc_2cb9e13cef0e431ea0ce93d784d7203e~mv2_d_1773_1330_s_2.jpg&quot;);">
+            <figcaption class="ng-binding">2</figcaption>
+            <div class="menu">
+                <span class="peek" data-id="1" ng-mouseenter="showPeek(img.data, $event)" ng-mouseleave="hidePeek()">
+                    <symbol icon="zoomIn"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Zoom In</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M8,5 L7,5 L7,7 L5,7 L5,8 L7,8 L7,10 L8,10 L8,8 L10,8 L10,7 L8,7 L8,5 L8,5 Z M12.646,11.895 C13.711,10.675 14.262,9.167 14.262,7.469 C14.262,3.718 11.221,0.677 7.469,0.677 C3.718,0.677 0.677,3.718 0.677,7.469 C0.677,11.221 3.718,14.262 7.469,14.262 C9.159,14.262 10.733,13.746 11.958,12.697 L14.938,15.677 L15.677,14.938 L12.646,11.895 L12.646,11.895 Z M7.469,13.217 C4.3,13.217 1.722,10.639 1.722,7.469 C1.722,4.3 4.3,1.722 7.469,1.722 C10.639,1.722 13.217,4.3 13.217,7.469 C13.217,10.639 10.639,13.217 7.469,13.217 L7.469,13.217 Z" id="L_Zoom-In" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+                <span class="delete" ng-click="hideTooltip(); removeNode($index); e.stopPropagation();" data-id="1" ng-mouseenter="showTooltip(&#39;ORGANIZE_IMAGES_DIALOG_TOOLTIP_REMOVE&#39;, $event)" ng-mouseleave="hideTooltip()">
+                    <symbol icon="deleteTrash"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="13px" height="15px" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Delete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M4,11 L5,11 L5,5 L4,5 L4,11 Z M8,11 L9,11 L9,5 L8,5 L8,11 Z M6,11 L7,11 L7,5 L6,5 L6,11 Z M9,2 L9,1.5 C9,0.701 8.248,0 7.392,0 L5.525,0 C4.684,0 4,0.673 4,1.5 L4,2 L0,2 L0,3 L1,3 L1,12 C1,13.657 2.343,15 4,15 L9,15 C10.657,15 12,13.657 12,12 L12,3 L13,3 L13,2 L9,2 L9,2 Z M5,1.5 C5,1.229 5.24,1 5.525,1 L7.392,1 C7.693,1 8,1.252 8,1.5 L8,2 L5,2 L5,1.5 L5,1.5 Z M11,12 C11,13.105 10.105,14 9,14 L4,14 C2.895,14 2,13.105 2,12 L2,3 L11,3 L11,12 L11,12 Z" id="L_Delete" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+            </div>
+        </div>
+    </figure><!-- end ngRepeat: img in images --><figure ng-repeat="img in images" id="new_5" class="imgCont ng-scope" ng-class="{active: selectedImg.id === img.id}" ng-click="preview(img, $index)" draggable="true" style="background: none;">
+        <div class="img loaded" ng-style="{&#39;background-image&#39;: getBGUrl(img)}" style="background-image: url(&quot;https://static.wixstatic.com/media/5c59bc_f882fcbbf2c24f78a998d79c21934b9c~mv2_d_2048_1536_s_2.jpg/v1/fill/w_120,h_120,lg_1/5c59bc_f882fcbbf2c24f78a998d79c21934b9c~mv2_d_2048_1536_s_2.jpg&quot;);">
+            <figcaption class="ng-binding">3</figcaption>
+            <div class="menu">
+                <span class="peek" data-id="2" ng-mouseenter="showPeek(img.data, $event)" ng-mouseleave="hidePeek()">
+                    <symbol icon="zoomIn"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Zoom In</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M8,5 L7,5 L7,7 L5,7 L5,8 L7,8 L7,10 L8,10 L8,8 L10,8 L10,7 L8,7 L8,5 L8,5 Z M12.646,11.895 C13.711,10.675 14.262,9.167 14.262,7.469 C14.262,3.718 11.221,0.677 7.469,0.677 C3.718,0.677 0.677,3.718 0.677,7.469 C0.677,11.221 3.718,14.262 7.469,14.262 C9.159,14.262 10.733,13.746 11.958,12.697 L14.938,15.677 L15.677,14.938 L12.646,11.895 L12.646,11.895 Z M7.469,13.217 C4.3,13.217 1.722,10.639 1.722,7.469 C1.722,4.3 4.3,1.722 7.469,1.722 C10.639,1.722 13.217,4.3 13.217,7.469 C13.217,10.639 10.639,13.217 7.469,13.217 L7.469,13.217 Z" id="L_Zoom-In" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+                <span class="delete" ng-click="hideTooltip(); removeNode($index); e.stopPropagation();" data-id="2" ng-mouseenter="showTooltip(&#39;ORGANIZE_IMAGES_DIALOG_TOOLTIP_REMOVE&#39;, $event)" ng-mouseleave="hideTooltip()">
+                    <symbol icon="deleteTrash"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="13px" height="15px" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Delete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M4,11 L5,11 L5,5 L4,5 L4,11 Z M8,11 L9,11 L9,5 L8,5 L8,11 Z M6,11 L7,11 L7,5 L6,5 L6,11 Z M9,2 L9,1.5 C9,0.701 8.248,0 7.392,0 L5.525,0 C4.684,0 4,0.673 4,1.5 L4,2 L0,2 L0,3 L1,3 L1,12 C1,13.657 2.343,15 4,15 L9,15 C10.657,15 12,13.657 12,12 L12,3 L13,3 L13,2 L9,2 L9,2 Z M5,1.5 C5,1.229 5.24,1 5.525,1 L7.392,1 C7.693,1 8,1.252 8,1.5 L8,2 L5,2 L5,1.5 L5,1.5 Z M11,12 C11,13.105 10.105,14 9,14 L4,14 C2.895,14 2,13.105 2,12 L2,3 L11,3 L11,12 L11,12 Z" id="L_Delete" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                </span>
+            </div>
+        </div>
+    </figure><!-- end ngRepeat: img in images -->
+</div>
+                </div>
+        </div>
+    </div>
+</div>
+
+                <!-- ngIf: showNoImagesTooltip -->
+            </div>
+
+            <div class="custom-scroll oi-panel-image-settings" ng-style="styles.root" class-name="oi-panel-image-settings">
+    <div class="outer-container" ng-style="styles.outerContainer">
+
+        <!-- ngIf: state.hasScroll --><div ref="scrollbar" class="custom-scrollbar ng-scope" ng-if="state.hasScroll" ng-class="{&#39;handleDrag&#39;: state.onDrag}" ng-click="onCustomScrollClick($event)">
+
+            <div ref="scrollHandle" class="custom-scroll-handle" ng-style="styles.scrollHandle" ng-mousedown="onHandleMouseDown($event)" style="height: 369.998px; top: 0px;">
+
+                <div class="inner-handle"></div>
+            </div>
+        </div><!-- end ngIf: state.hasScroll -->
+
+        <div ref="innerContainer" class="inner-container" ng-class="{&#39;content-scrolled&#39;: state.scrollPos}" ng-style="styles.innerContainer" style="margin-right: -19px;">
+
+            <div ref="contentWrapper" class="content-wrapper" ng-style="styles.contentWrapper" ng-transclude="" style="margin-right: 0px; overflow-y: visible;">
+                <div class="comp-panel-content settings-panel sets ng-scope ng-isolate-scope img" ng-class="{img: isThereAnImage()}" selected-img="selectedImg" preview="preview" get-img-url="getImgUrl">
+    <div class="image-preview" ng-class="{&#39;empty&#39;: !isThereAnImage()}">
+        <div class="image-wrapper" ng-style="{&#39;background-image&#39;: getCssUrl(), &#39;background-size&#39;: getCssSize()}" style="background-image: url(&quot;https://static.wixstatic.com/media/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png/v1/fill/w_287,h_155,lg_1/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png&quot;); background-size: contain;">
+            <!-- ngIf: isThereAnImage() --><img ng-if="isThereAnImage()" ng-src="https://static.wixstatic.com/media/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png/v1/fill/w_287,h_155,lg_1/5c59bc_c192818b039e47fb812b389be0b26b99~mv2_d_1800_1800_s_2.png" class="oi-image-downloadable ng-scope" ng-alt="selectedImg.data.title" src="./5c59bc_c192818b039e47fb812b389be0b26b99_mv2_d_1800_1800_s_2.png"><!-- end ngIf: isThereAnImage() -->
+        </div>
+
+        <!-- ngIf: isThereAnImage() --><span ng-if="isThereAnImage()" ng-disabled="!selectedImg.position" ng-click="selectImg(-1)" class="arrow-button prev ng-scope" disabled="disabled"></span><!-- end ngIf: isThereAnImage() -->
+
+        <!-- ngIf: isThereAnImage() --><span ng-if="isThereAnImage()" ng-disabled="selectedImg.position === images.length - 1" ng-click="selectImg(1)" class="arrow-button next ng-scope"></span><!-- end ngIf: isThereAnImage() -->
+
+        <!-- ngIf: !isThereAnImage() -->
+
+        <!-- ngIf: isThereAnImage() --><container class="button-wrapper ng-scope" ng-if="isThereAnImage()">
+            <button class="control-button btn-confirm-secondary" ng-disabled="!isThereAnImage()" ng-click="openMediaGallery()" bi-event="ORGIMAGES_CLICK_REPLACE">
+                <symbol icon="change"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="bm-icon">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Change</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M9,10 L12.25,9.917 C11.227,11.727 8.877,12.881 6.778,12.881 C3.601,12.881 1.016,10 1.016,7 L0.016,7 C0.016,11 3.049,13.881 6.778,13.881 C10.833,13.881 13,10.667 13,10.667 L13,14 L14,14 L14,9 L9,9 L9,10 L9,10 Z M5,4 L1.758,4.083 C2.781,2.273 5.135,1.119 7.234,1.119 C10.411,1.119 13,4 13,7 L14,7 C14,3 10.959,0.119 7.23,0.119 C3.175,0.119 1,3.333 1,3.333 L1,0 L0,0 L0,5 L5,5 L5,4 L5,4 Z" id="L_Change" fill="#1D2D3C" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg></symbol>
+                <span translate="">Replace Image</span>
+            </button>
+        </container><!-- end ngIf: isThereAnImage() -->
+    </div>
+
+    <div class="control-section-divider labeled">
+        <span translate="">Image Info</span>
+    </div>
+
+    <div class="oi-container-panel-settings-inputs">
+        <div class="control-text-input has-label not-focused" ng-class="{ &#39;not-focused&#39;: !imgTitleFocusState, &#39;is-disabled&#39;: !isThereAnImage() }">
+
+            <label class="text-input-label">
+                <span translate="">Title (Alt text)</span>
+                <span class="info-icon" extra-class="oi-tooltip-image-title" label="ORGANIZE_IMAGES_DIALOG_IMG_TITLE_TOOLTIP">
+    <symbol icon="infoIcon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="1.5 1.5 18 18" width="18" height="18" class="bm-icon">
+  <g id="infoIconSvg">
+    <circle cx="10.5" cy="10.5" r="8px"></circle>
+    <path d="M10.500,19.500 C5.529,19.500 1.500,15.471 1.500,10.500 C1.500,5.529 5.529,1.500 10.500,1.500 C15.471,1.500 19.500,5.529 19.500,10.500 C19.500,15.471 15.471,19.500 10.500,19.500 ZM2.500,10.500 C2.500,14.911 6.089,18.500 10.500,18.500 C14.911,18.500 18.500,14.911 18.500,10.500 C18.500,6.089 14.911,2.500 10.500,2.500 C6.089,2.500 2.500,6.089 2.500,10.500 ZM12.500,15.500 C12.500,15.500 8.500,15.500 8.500,15.500 C8.500,15.500 9.500,13.500 9.500,13.500 C9.500,13.500 9.500,13.500 9.500,13.500 C9.500,13.500 9.500,10.500 9.500,10.500 C9.500,10.500 8.500,10.500 8.500,10.500 C8.500,10.500 9.500,8.500 9.500,8.500 C9.500,8.500 11.500,8.500 11.500,8.500 C11.500,8.500 11.500,13.500 11.500,13.500 C11.500,13.500 11.500,13.500 11.500,13.500 C11.500,13.500 12.500,15.500 12.500,15.500 ZM9.500,5.500 C9.500,5.500 11.500,5.500 11.500,5.500 C11.500,5.500 11.500,7.500 11.500,7.500 C11.500,7.500 9.500,7.500 9.500,7.500 C9.500,7.500 9.500,5.500 9.500,5.500 Z" id="path-1" fill-rule="evenodd"></path>
+  </g>
+</svg></symbol>
+    <div class="oi-tooltip-image-title tooltip-presenter alignment-top content-only">
+        <div class="arrow"></div>
+        <div class="content-wrapper">
+            <div class="imageAndTextTooltip">
+                <div class="text-container text-no-image">
+                    <div class="text">
+                        <span translate="" class="ng-binding">Give your image a unique title (Alt text). To see how and when this title gets displayed, you'll need to Preview your website.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
+            </label>
+
+            <input name="title" class="input ng-pristine ng-valid" translate="" tabindex="5" type="text" placeholder="Add your title here" select-on-focus="" ng-disabled="!isThereAnImage()" ng-model="selectedImg.data.title" ng-keydown="keyDown($event)" ng-focus="imgTitleFocusState = true" ng-blur="imgTitleFocusState = false" maxlength="36" ng-change="change()" bi-event="ORGIMAGES_EDIT_TITLE" data-bi-event-type="change" data-bi-event-bind="on" data-bi-event-collect="true">
+        </div>
+
+        <hr class="divider-long">
+
+        <!-- ngIf: isImageGallery --><div class="control-text-input has-label ng-scope not-focused" ng-class="{ &#39;not-focused&#39;: !imgDescFocusState, &#39;is-disabled&#39;: !isThereAnImage() }" ng-if="isImageGallery">
+
+            <label class="text-input-label">
+                <span translate="">Description</span>
+                <span class="info-icon" extra-class="oi-tooltip-image-description" label="ORGANIZE_IMAGES_DIALOG_IMG_DESC_TOOLTIP">
+    <symbol icon="infoIcon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="1.5 1.5 18 18" width="18" height="18" class="bm-icon">
+  <g id="infoIconSvg">
+    <circle cx="10.5" cy="10.5" r="8px"></circle>
+    <path d="M10.500,19.500 C5.529,19.500 1.500,15.471 1.500,10.500 C1.500,5.529 5.529,1.500 10.500,1.500 C15.471,1.500 19.500,5.529 19.500,10.500 C19.500,15.471 15.471,19.500 10.500,19.500 ZM2.500,10.500 C2.500,14.911 6.089,18.500 10.500,18.500 C14.911,18.500 18.500,14.911 18.500,10.500 C18.500,6.089 14.911,2.500 10.500,2.500 C6.089,2.500 2.500,6.089 2.500,10.500 ZM12.500,15.500 C12.500,15.500 8.500,15.500 8.500,15.500 C8.500,15.500 9.500,13.500 9.500,13.500 C9.500,13.500 9.500,13.500 9.500,13.500 C9.500,13.500 9.500,10.500 9.500,10.500 C9.500,10.500 8.500,10.500 8.500,10.500 C8.500,10.500 9.500,8.500 9.500,8.500 C9.500,8.500 11.500,8.500 11.500,8.500 C11.500,8.500 11.500,13.500 11.500,13.500 C11.500,13.500 11.500,13.500 11.500,13.500 C11.500,13.500 12.500,15.500 12.500,15.500 ZM9.500,5.500 C9.500,5.500 11.500,5.500 11.500,5.500 C11.500,5.500 11.500,7.500 11.500,7.500 C11.500,7.500 9.500,7.500 9.500,7.500 C9.500,7.500 9.500,5.500 9.500,5.500 Z" id="path-1" fill-rule="evenodd"></path>
+  </g>
+</svg></symbol>
+    <div class="oi-tooltip-image-description tooltip-presenter alignment-top content-only">
+        <div class="arrow"></div>
+        <div class="content-wrapper">
+            <div class="imageAndTextTooltip">
+                <div class="text-container text-no-image">
+                    <div class="text">
+                        <span translate="" class="ng-binding">Add some more info about your image. To see how and when this description gets displayed, you'll need to Preview your website.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
+            </label>
+
+            <textarea name="description" class="oi-textarea-image-description input ng-pristine ng-valid" translate="" tabindex="6" placeholder="Describe your image" select-on-focus="" ng-disabled="!isThereAnImage()" ng-model="selectedImg.data.description" ng-keydown="keyDown($event)" ng-focus="imgDescFocusState = true" ng-blur="imgDescFocusState = false" maxlength="500" ng-change="change()" bi-event="ORGIMAGES_EDIT_DESCRIPTION" data-bi-event-type="change" data-bi-event-bind="on" data-bi-event-collect="true">            </textarea>
+        </div><!-- end ngIf: isImageGallery -->
+
+        <!-- ngIf: isImageGallery --><hr class="divider-long ng-scope" ng-if="isImageGallery"><!-- end ngIf: isImageGallery -->
+
+        <!-- ngIf: showLinkTo --><div class="input-link-to ng-scope" ng-if="showLinkTo" ng-class="{&#39;disabled&#39;: !isThereAnImage()}" ng-mouseover="imgLinkToHovered = true" ng-mouseout="imgLinkToHovered = false">
+
+            <label translate="" class="with-button">Link</label>
+
+            <div class="wrapper-to-not-lose-ref" ng-click="openLinkDialog($event)">
+                <div class="link">
+                    <!-- ngIf: !selectedImg.linkText -->
+                    <!-- ngIf: selectedImg.linkText --><span ng-if="selectedImg.linkText" class="ng-binding ng-scope">
+                        https://kullatonlohaprasert.github.io/dairy/
+                    </span><!-- end ngIf: selectedImg.linkText -->
+                </div>
+            </div>
+
+            <button tabindex="7" class="oi-button-link-to" ng-class="{&#39;link-bright&#39;: imgLinkToHovered}" ng-disabled="!isThereAnImage()" ng-click="openLinkDialog($event)">
+                <symbol icon="linkBtnThin"><svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="bm-icon">
+    <path d="M17.0999619,6.90003811 C15.8487306,5.64880678 13.9026131,5.70880479 12.5739298,7.03857898 L11.6870501,7.92545873 L12.2924846,8.53089325 L13.1782734,7.6440135 C14.1796949,6.64259208 15.5738306,6.58477581 16.4956182,7.50547263 C17.4163151,8.42507857 17.3574079,9.82030514 16.3559865,10.8217266 L14.6618607,12.5169432 C14.1840584,12.9936547 13.58626,13.2740091 12.9786437,13.3045535 C12.357937,13.3307345 11.7928647,13.1136507 11.3401524,12.6609384 L10.7347179,13.2652821 C11.3172441,13.8478083 12.0688556,14.1630706 12.8662838,14.1630706 C12.9186457,14.1630706 12.9699167,14.1630706 13.0222786,14.1597979 C13.8426151,14.1172539 14.6400433,13.7485388 15.2662044,13.1212868 L16.961421,11.4271611 C18.2911952,10.096296 18.3511932,8.15017857 17.0999619,6.90003811 L17.0999619,6.90003811 Z M10.8219878,16.3557253 C10.3452763,16.8324368 9.7496596,17.1106094 9.14313422,17.1411539 C8.53988145,17.1815162 7.95953701,16.9480693 7.50573384,16.4942662 C7.05193067,16.040463 6.82830171,15.4753908 6.85884615,14.8568658 C6.88939059,14.2514313 7.16865408,13.6547237 7.64427471,13.1780122 L9.33949136,11.4827956 C10.3354584,10.4857377 11.7295941,10.4290123 12.6502909,11.3497091 L13.2557254,10.7453654 C12.0034032,9.49413411 10.0594675,9.55085951 8.73405684,10.8784519 L7.03993107,12.5725777 C6.41158822,13.1998297 6.04396402,13.996167 6.00360172,14.8154126 C5.96214854,15.6684753 6.27959259,16.4789939 6.90029932,17.0997007 C7.50137035,17.7007717 8.26389058,17.9996709 9.04059215,17.9996709 C9.87947349,17.9996709 10.7368997,17.6516824 11.4274223,16.9611598 L12.2924846,16.0950066 L11.6870501,15.490663 L10.8219878,16.3557253 Z"></path>
+</svg></symbol>
+            </button>
+        </div><!-- end ngIf: showLinkTo -->
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+        </hbox>
+        <hbox class="oi-footer-fixed">
+            <button class="oi-button-cancel control-button btn-confirm-secondary btn-md" bi-event="ORGIMAGES_CLICK_CANCEL" ng-click="showConfirm(confirmSets)">
+                <span translate="">Cancel</span>
+            </button>
+
+            <button class="oi-button-done control-button btn-md" ng-click="save()">
+                <span translate="">Done</span>
+            </button>
+        </hbox>
+    </div>
+
+    <figure id="peek" class="zoom ng-isolate-scope" zoom="" zoom-img="zoomImg" zoom-visible="zoomVisible"><img ng-src="//:0" src="https://:0/">
+<figcaption>
+    <!-- ngIf: zoomImg -->
+    <!-- ngIf: zoomImg -->
+</figcaption></figure>
+    <div id="tooltip" class="zoom tooltip ng-isolate-scope" tooltip="" tooltip-msg="tooltipMsg" tooltip-visible="tooltipVisible"><p class="title ng-binding"></p></div>
+
+    <container class="oi-window-preloader ng-hide" ng-show="preloader">
+        <div class="oi-spinner"></div>
+    </container>
+
+    <container class="oi-window-confirm ng-hide" ng-show="confirm.message">
+        <div class="confirmation-panel-frame ng-hide" type="important" ng-show="confirm.message">
+            <header class="panel-header dark">
+                <span class="panel-header-title" translate="">Just a Sec...</span>
+                <button class="close" ng-click="hideConfirm()">
+                  <div class="oi-icon-close"></div>
+                </button>
+            </header>
+            <div class="content">
+                <div>
+                    <div class="content">
+                        <p translate="" class="ng-binding"></p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <button class="control-button btn-confirm-secondary btn-md" bi-event="ORGIMAGES_CLICK_CONFIRMATION" data-bi-event-param="no" ng-click="hideConfirm()">
+                    <span translate="">No</span>
+                </button>
+
+                <button class="control-button btn-md" bi-event="ORGIMAGES_CLICK_CONFIRMATION" data-bi-event-param="yes" ng-click="confirm.callback()">
+                    <span translate="">Yes</span>
+                </button>
+            </footer>
+        </div>
+    </container>
+
+    <div class="settings-dialog popup fade">
+        <header class="popup-header panel-header dark tag-triangle tag-top">
+            <span class="panel-header-title" translate="">Choose Your Settings</span>
+
+            <button ng-click="closeSettings(&#39;CLOSE&#39;)" class="close">
+                <symbol icon="headerCloseButton"><svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="bm-icon"> 
+  <path d="M11.7928932,12.5 L8.14644661,8.85355339 L7.79289322,8.5 L8.5,7.79289322 L8.85355339,8.14644661 L12.5,11.7928932 L16.1464466,8.14644661 L16.5,7.79289322 L17.2071068,8.5 L16.8535534,8.85355339 L13.2071068,12.5 L16.8535534,16.1464466 L17.2071068,16.5 L16.5,17.2071068 L16.1464466,16.8535534 L12.5,13.2071068 L8.85355339,16.8535534 L8.5,17.2071068 L7.79289322,16.5 L8.14644661,16.1464466 L11.7928932,12.5 Z"></path>
+</svg></symbol>
+            </button>
+        </header>
+
+        <div class="popup-content content">
+            <div class="dropdown select">
+                <label translate="">Add new images:</label>
+
+                <div class="select dd">
+                    <i class="expand arrow">
+                        <symbol icon="arrowDown"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="135.1 -517.4 1024 1024" style="enable-background:new 135.1 -517.4 1024 1024;" xml:space="preserve" width="12px" height="12px" class="bm-icon">
+<path d="M137.3-195c0,17.4,7.4,34.7,19.8,47.1l441.4,409.1c27.3,24.8,71.9,24.8,99.2,0l438.9-429
+	c27.3-24.8,27.3-66.9,0-91.7c-27.3-24.8-71.9-24.8-99.2,0L648.1,122.3L256.3-242.2c-27.3-24.8-71.9-24.8-99.2,0
+	C144.7-227.3,137.3-212.4,137.3-195z"></path>
+</svg></symbol>
+                    </i>
+                    <span translate="" class="ng-binding">At the start of the gallery</span>
+                    <select class="add-method ng-pristine ng-valid" name="addMethod" ng-model="userSets.addMethod" ng-options="method.value as method.label for method in userSetsOptions.addMethod"><option value="0" selected="selected" label="At the start of the gallery">At the start of the gallery</option><option value="1" label="At the end of the gallery">At the end of the gallery</option><option value="2" label="After selected image">After selected image</option></select>
+                </div>
+            </div>
+
+            <div class="dropdown select">
+                <i class="expand arrow"></i>
+                <label translate="">And add them:</label>
+
+                <div class="select dd">
+                    <i class="expand arrow">
+                        <symbol icon="arrowDown"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="135.1 -517.4 1024 1024" style="enable-background:new 135.1 -517.4 1024 1024;" xml:space="preserve" width="12px" height="12px" class="bm-icon">
+<path d="M137.3-195c0,17.4,7.4,34.7,19.8,47.1l441.4,409.1c27.3,24.8,71.9,24.8,99.2,0l438.9-429
+	c27.3-24.8,27.3-66.9,0-91.7c-27.3-24.8-71.9-24.8-99.2,0L648.1,122.3L256.3-242.2c-27.3-24.8-71.9-24.8-99.2,0
+	C144.7-227.3,137.3-212.4,137.3-195z"></path>
+</svg></symbol>
+                    </i>
+                    <span translate="" class="ng-binding">With current titles</span>
+                    <select ng-model="userSets.keepTitles" ng-options="keepTitles.value as keepTitles.label for keepTitles in userSetsOptions.keepTitles" class="ng-pristine ng-valid"><option value="0" selected="selected" label="With current titles">With current titles</option><option value="1" label="Without titles">Without titles</option></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="./jquery.min.js.ดาวน์โหลด"></script>
+    <script src="./angular.min.js.ดาวน์โหลด"></script>
+
+    <script src="./bundle.min.js.ดาวน์โหลด"></script>
+
+
+</body></html>
